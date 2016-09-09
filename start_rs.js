@@ -18,10 +18,6 @@ config = {
 			"_id" : 3,
 			"host" : "mongo_instance_004:27017"
 		},
-		{
-			"_id" : 4,
-			"host" : "mongo_instance_005:27017"
-		}
 	]
 }
 rs.initiate(config)

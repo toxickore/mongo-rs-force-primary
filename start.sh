@@ -15,3 +15,8 @@ echo #  Forcing node 02 as primary   #
 echo #################################
 sleep 20
 mongo --port 28001 primary.js
+echo #################################
+echo #    Add arbiter member         #
+echo #################################
+sleep 20
+mongo --port 28003 arbiter.js
