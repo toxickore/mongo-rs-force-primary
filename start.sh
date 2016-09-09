@@ -1,4 +1,11 @@
 #!/bin/bash
+if [ "$(sudo docker network ls | grep mongo_cluster | wc -l)" -eq "0" ];
+then
+	echo #################################
+	echo # creating docker mongo_cluster #
+	echo #################################
+	sudo docker network create mongo_cluster
+fi
 
 sudo docker run -p 28001:27017 --name mongo_instance_001 --net mongo_cluster mongo_ex mongod --setParameter authenticationMechanisms=MONGODB-CR --replSet rs0 &
 sudo docker run -p 28002:27017 --name mongo_instance_002 --net mongo_cluster mongo_ex mongod --setParameter authenticationMechanisms=MONGODB-CR --replSet rs0 &
