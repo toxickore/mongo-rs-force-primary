@@ -10,8 +10,8 @@ Backup members: mongo_instance_004
 Arbiter member: mongo_instance_005
 
 Assumptions to run:
-- Ubuntu 16.04
-- Running as traditional user through sudo commands
+- Ubuntu 16.04LTS
+- Running as non privileged user through sudo commands
 - Using the mongo docker container
 - Docker built image locally available from git clone (docker build -t mongo_ex .)
-- mongo client is installed
+- Packages mongodb-clients,docker.io installed
