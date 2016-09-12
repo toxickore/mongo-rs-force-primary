@@ -17,3 +17,6 @@ Assumption:
 - Using the mongo docker container
 - This docker image is already built as: docker built -t docker_ex .
 - Packages mongodb-clients,docker.io installed
+
+How to run this replication set:
+Just run the start.sh script
