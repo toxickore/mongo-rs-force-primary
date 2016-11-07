@@ -15,8 +15,7 @@ Assumption:
 - Ubuntu 16.04LTS
 - Running as non privileged user through sudo commands
 - Using the mongo docker container
-- This docker image is already built as: docker built -t docker_ex .
-- Packages mongodb-clients,docker.io installed
+- Packages mongodb-clients, docker.io installed
 
 How to run this replication set:
 Just run the start.sh script

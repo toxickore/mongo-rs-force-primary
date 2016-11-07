@@ -1,4 +1,9 @@
 #!/bin/bash
+if [ "$(sudo docker images | grep mongo_ex | wc -l)" -eq "0" ];
+then
+	sudo docker build -t mongo_ex .
+fi
+
 if [ "$(sudo docker network ls | grep mongo_cluster | wc -l)" -eq "0" ];
 then
 	echo "#################################"
